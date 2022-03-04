@@ -27,10 +27,17 @@ class Buttons:
     button_donations = 'Support Us 💵'
     button_characteristics = 'Characteristics 📊'
 
+class ButtonBasic:
+    button_next = '➡️'
+    button_prev = '⬅️'
+    button_true = '✅'
+    button_false = '❌'
+
 class InlineButtonSend:
-    button_sun = '1'
-    button_cloud = '2'
-    button_cock = '3'
+    button_sun = '☀️'
+    button_cloud = '☁️'
+    button_sun_cloud = '🌤'
+    button_cloud_sun = '⛅️'
 
 class InlineButtonAdd:
     button_add = 'Add'

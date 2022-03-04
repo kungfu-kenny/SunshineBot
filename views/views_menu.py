@@ -2,11 +2,11 @@ import os
 from aiogram.types import (
     ReplyKeyboardMarkup, 
     InlineKeyboardButton, 
-    # KeyboardButton, 
     InlineKeyboardMarkup
 )
 from views.views_callback import cbc
 from config import (
+    ButtonBasic,
     Buttons, 
     CallbackSend, 
     CallbackReplyMain
@@ -30,7 +30,9 @@ class ViewMenu:
     @staticmethod
     def return_user_donations(value_id:int) -> object:
         """
-        
+        Method which is dedicated to work with the donations
+        Input:  value_id = id of the
+        Output: we developed the donation to the selected values
         """
         return InlineKeyboardMarkup(
             inline_keyboard=[
@@ -50,18 +52,32 @@ class ViewMenu:
     @staticmethod
     def return_user_help(value_id:int) -> object:
         """
-        
+        Method which is dedicated to work with the help
+        Input:  value_id = id of the
+        Output: we developed the help to the user
         """
         return InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        'Check',
+                        'Basic Description',
+                        callback_data='341342424'
+                        )
+                ],
+                [
+                    InlineKeyboardButton(
+                        'Add emotions',
                         callback_data='1223314'
                     ),
                     InlineKeyboardButton(
-                        'Check',
+                        'Add users',
                         callback_data='1223314'
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        'About us',
+                        callback_data='4234231423'
                     )
                 ]
             ]
@@ -70,17 +86,19 @@ class ViewMenu:
     @staticmethod
     def return_user_characteristics(value_id:int) -> object:
         """
-        
+        Method which is dedicated to produce the 
+        Input:  value_id = id of the selected values
+        Output: we developed the characteristics to the user
         """
         return InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        'Check',
+                        'Sent from me',
                         callback_data='1223314'
                     ),
                     InlineKeyboardButton(
-                        'Check',
+                        'Sent to me',
                         callback_data='1223314'
                     )
                 ]
@@ -91,17 +109,18 @@ class ViewMenu:
     def return_user_settings(value_id:int) -> object:
         """
         Method which is dedicated to work with the user settings to it
-        Input:  value_id = id of the selected 
+        Input:  value_id = id of the selected user
+        Output: we developed the settings module of the user
         """
         return InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        'Check',
+                        'Notifications',
                         callback_data='1223314'
                     ),
                     InlineKeyboardButton(
-                        'Check',
+                        ButtonBasic.button_true,
                         callback_data='1223314'
                     )
                 ]
