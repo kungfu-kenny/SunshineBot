@@ -7,12 +7,10 @@ load_dotenv()
 token = os.getenv('TOKEN')
 users_resend = [int(os.getenv('USER_DEFAULT', 0))]
 
-print(users_resend, type(users_resend[0]))
-print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-
 class Folders:
     folder_here = os.getcwd()
     folder_logs = 'logs'
+    folder_storage = 'storage'
 
 class Commands:
     command_start = 'start'
