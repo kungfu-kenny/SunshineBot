@@ -9,6 +9,7 @@ from config import (
     ButtonBasic,
     Buttons, 
     CallbackSend, 
+    CallbackHelp,
     CallbackReplyMain
 )
 
@@ -61,23 +62,31 @@ class ViewMenu:
                 [
                     InlineKeyboardButton(
                         'Basic Description',
-                        callback_data='341342424'
+                        callback_data=\
+                            CallbackHelp.callback_help_basic_description
+                            # cbc.new(action='help', id=CallbackHelp.callback_help_basic_description)
                         )
                 ],
                 [
                     InlineKeyboardButton(
                         'Add emotions',
-                        callback_data='1223314'
+                        callback_data=\
+                            CallbackHelp.callback_help_add_emotions
+                            # cbc.new(action='help', id=CallbackHelp.callback_help_add_emotions)
                     ),
                     InlineKeyboardButton(
                         'Add users',
-                        callback_data='1223314'
+                        callback_data=\
+                            CallbackHelp.callback_help_add_users
+                            # cbc.new(action='help', id=CallbackHelp.callback_help_add_users)
                     )
                 ],
                 [
                     InlineKeyboardButton(
                         'About us',
-                        callback_data='4234231423'
+                        callback_data=\
+                            CallbackHelp.callback_help_about_us
+                            # cbc.new(action='help', id=CallbackHelp.callback_help_about_us)
                     )
                 ]
             ]

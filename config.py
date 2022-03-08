@@ -11,6 +11,7 @@ class Folders:
     folder_here = os.getcwd()
     folder_logs = 'logs'
     folder_storage = 'storage'
+    db = 'database.sql'
 
 class Commands:
     command_start = 'start'
@@ -34,10 +35,10 @@ class ButtonBasic:
     button_false = '❌'
 
 class InlineButtonSend:
-    button_sun = '☀️'
-    button_cloud = '☁️'
-    button_sun_cloud = '🌤'
-    button_cloud_sun = '⛅️'
+    button_sun = [1, '☀️']
+    button_cloud = [2, '☁️']
+    button_sun_cloud = [3, '🌤']
+    button_cloud_sun = [4, '⛅️']
 
 class InlineButtonAdd:
     button_add = 'Add'
@@ -53,9 +54,26 @@ class CallbackReplyMain:
     callback_main_characteristics = '105'
 
 class CallbackSend:
-    callback_send_sun = '000'
-    callback_send_cloud = '001'
-    callback_send_sun_cloud = '002'
-    callback_send_cloud_sun = '003'
+    callback_send_sun = '001'
+    callback_send_cloud = '002'
+    callback_send_sun_cloud = '003'
+    callback_send_cloud_sun = '004'
     callback_send_selected = lambda x: f"00{x}"
-    
+    callback_all = [
+        callback_send_cloud_sun, 
+        callback_send_cloud, 
+        callback_send_sun_cloud, 
+        callback_send_cloud_sun
+    ]
+
+class CallbackHelp:
+    callback_help_basic_description = '200'
+    callback_help_add_emotions = '201'
+    callback_help_add_users = '202'
+    callback_help_about_us = '203'
+    callback_all = [
+        callback_help_basic_description, 
+        callback_help_add_emotions, 
+        callback_help_add_users, 
+        callback_help_about_us
+    ]

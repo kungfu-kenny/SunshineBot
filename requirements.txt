@@ -7,8 +7,10 @@ Babel==2.9.1
 certifi==2021.10.8
 charset-normalizer==2.0.12
 frozenlist==1.3.0
+greenlet==1.1.2
 idna==3.3
 multidict==6.0.2
 python-dotenv==0.19.2
 pytz==2021.3
+SQLAlchemy==1.4.32
 yarl==1.7.2

@@ -1,4 +1,4 @@
-from config import Buttons
+from config import Buttons, CallbackHelp
 
 
 def text_start(name_first:str, name_last:str, name_user:str) -> str:
@@ -41,3 +41,21 @@ def text_user_return(value_list:list) -> set:
         return user_id, ' '.join([user_name_first, user_name_last]).strip()
     return user_id, 'unknown'
 
+def text_user_help(callback_help:str) -> str:
+    """
+    Function which is dedicated to work with the 
+    Input:  callback_help = callback which is dedicated to return selected text
+    Output: we developed the selected text
+    """
+    if callback_help == CallbackHelp.callback_help_about_us:
+        return \
+            "Text about us "
+    if callback_help == CallbackHelp.callback_help_add_emotions:
+        return \
+            "Text add emotions which would be changed"
+    if callback_help == CallbackHelp.callback_help_add_users:
+        return \
+            "Text add users to all of it"
+    if callback_help == CallbackHelp.callback_help_basic_description:
+        return \
+            "Text about the basic description"
