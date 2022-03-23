@@ -1,3 +1,4 @@
+from email.policy import default
 import os
 from sqlalchemy import (
     Column, 
@@ -27,9 +28,16 @@ class User(Base):
     datetime = Column(DateTime, default=datetime.now())
 
     send = relationship("EmojiSend", back_populates='users')
-    # send_friend = relationship("EmojiSend", back_populates='users_friend')
+    user_friend = relationship("Friend", back_populates='friend')
     user_emoji = relationship('UserEmoji', back_populates='users')
     notification = relationship('UserNotification', back_populates='users')
+
+class Friend(Base):
+    __tablename__ = 'friends'
+    id = Column(Integer, primary_key=True)
+    id_telegram = Column(Integer, ForeignKey('users.id'))
+    name_friend = Column(String(100), default='Unknown Friend')
+    friend = relationship('User', back_populates='user_friend')
 
 class UserNotification(Base):
     __tablename__ = 'user_notifications'

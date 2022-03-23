@@ -69,6 +69,14 @@ class ModelsBasic:
         produce_datetime(1)
         return
 
+    def add_users_friend(self, value_list:list) -> None:
+        """
+        Method which is dedicated to add the selected friend to the collection
+        Input:  value_list = list of the 
+        Output: we developed the values of the friends
+        """
+        pass
+
     def check_users_notification(self, user_id:int, user_id_friend:int) -> bool:
         """
         Method which is dedicated to check the capability of the notifications to it

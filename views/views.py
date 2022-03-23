@@ -2,7 +2,7 @@ from cgitb import text
 from email import message
 from aiogram import types
 from aiogram.types import Message, CallbackQuery
-from aiogram.dispatcher.filters import ChatTypeFilter, Text
+# from aiogram.dispatcher.filters import ChatTypeFilter, Text
 from views.view_bot import dp, bot
 from views.views_callback import cbc
 from models.models_use_basic import ModelsBasic
